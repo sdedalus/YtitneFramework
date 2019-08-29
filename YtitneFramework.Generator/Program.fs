@@ -14,8 +14,6 @@ let baseTSqlFragmentType = typeof<Microsoft.SqlServer.TransactSql.ScriptDom.TSql
 
 let syntaxListType = typedefof<System.Collections.Generic.IList<_>>
 let syntaxNullType = typedefof<System.Nullable<_>>
-//let syntaxListType = typedefof<Microsoft.CodeAnalysis.SyntaxList<_>>
-//let syntaxTokenType = typeof<Microsoft.CodeAnalysis.SyntaxToken>
 
 ////////////////////////////////////////////
 
@@ -105,6 +103,14 @@ let getPatternName (t: Type) =
     let name = t.Name
     if name.EndsWith "Statement" && not (name = "AlterTableDropTableElementStatement") then
         name.Substring(0, name.Length - 9)
+    else if name.EndsWith "Option"  then
+        name.Substring(0, name.Length - 6) + "Opt"
+    else if name.EndsWith "Definition"  then
+        name.Substring(0, name.Length - 10) + "Def"
+    else if name.EndsWith "Expression" then
+          name.Substring(0, name.Length - 10) + "Expr"
+    else if name.EndsWith "Reference" then
+        name.Substring(0, name.Length - 9) + "Ref"
     else
         name
 
@@ -344,7 +350,7 @@ let main argv =
         
     generateStrictActivePatternsForSyntax
         (getTargetPath "Strict" "YtitneFramework.fs")
-        (baseTSqlFragmentType.Namespace + ".Strict")
+        ("YtitneFramework.Strict")
         (syntaxTypes baseTSqlFragmentType)
         (getNodeName baseTSqlFragmentType)
     0

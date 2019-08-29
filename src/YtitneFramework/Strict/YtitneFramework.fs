@@ -1,6 +1,6 @@
 // This is auto-generated source code, DO NOT EDIT!
 
-namespace Microsoft.SqlServer.TransactSql.ScriptDom.Strict
+namespace YtitneFramework.Strict
 
 [<AutoOpen>]
 module ActivePatterns =
@@ -35,7 +35,7 @@ module ActivePatterns =
       Some (node.Value, node.QuoteType)
     | _ -> None
 
-  let (|PrimaryExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|PrimaryExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.PrimaryExpression as node ->
       Some (node.Collation)
@@ -53,7 +53,7 @@ module ActivePatterns =
       Some (node.LiteralType, node.QuoteType)
     | _ -> None
 
-  let (|IdentifierOrValueExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|IdentifierOrValueExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.IdentifierOrValueExpression as node ->
       Some (node.Value, node.Identifier, node.ValueExpression)
@@ -131,37 +131,37 @@ module ActivePatterns =
       Some (node.ExecuteSpecification, node.Options |> Seq.toList)
     | _ -> None
 
-  let (|ExecuteOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ExecuteOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ExecuteOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|ResultSetsExecuteOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ResultSetsExecuteOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ResultSetsExecuteOption as node ->
       Some (node.ResultSetsOptionKind, node.Definitions |> Seq.toList)
     | _ -> None
 
-  let (|ResultSetDefinition|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ResultSetDef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ResultSetDefinition as node ->
       Some (node.ResultSetType)
     | _ -> None
 
-  let (|InlineResultSetDefinition|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|InlineResultSetDef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.InlineResultSetDefinition as node ->
       Some (node.ResultColumnDefinitions |> Seq.toList)
     | _ -> None
 
-  let (|ResultColumnDefinition|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ResultColumnDef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ResultColumnDefinition as node ->
       Some (node.ColumnDefinition, node.Nullable)
     | _ -> None
 
-  let (|SchemaObjectResultSetDefinition|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|SchemaObjectResultSetDef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.SchemaObjectResultSetDefinition as node ->
       Some (node.Name)
@@ -197,7 +197,7 @@ module ActivePatterns =
       Some (node.ProcedureReference, node.ProcedureVariable)
     | _ -> None
 
-  let (|ExecutableProcedureReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ExecutableProcedureRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ExecutableProcedureReference as node ->
       Some (node.ProcedureReference, node.AdHocDataSource)
@@ -215,7 +215,7 @@ module ActivePatterns =
       Some (node.ProviderName, node.InitString)
     | _ -> None
 
-  let (|ViewOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ViewOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ViewOption as node ->
       Some (node.OptionKind)
@@ -233,13 +233,13 @@ module ActivePatterns =
       Some (node.Name, node.TriggerScope)
     | _ -> None
 
-  let (|TriggerOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|TriggerOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.TriggerOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|ExecuteAsTriggerOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ExecuteAsTriggerOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ExecuteAsTriggerOption as node ->
       Some (node.ExecuteAsClause)
@@ -269,7 +269,7 @@ module ActivePatterns =
       Some (node.ProcedureReference, node.IsForReplication, node.Options |> Seq.toList)
     | _ -> None
 
-  let (|ProcedureReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ProcedureRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ProcedureReference as node ->
       Some (node.Name, node.Number)
@@ -287,31 +287,31 @@ module ActivePatterns =
       Some (node.Name, node.ReturnType, node.Options |> Seq.toList, node.OrderHint)
     | _ -> None
 
-  let (|ProcedureOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ProcedureOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ProcedureOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|ExecuteAsProcedureOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ExecuteAsProcedureOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ExecuteAsProcedureOption as node ->
       Some (node.ExecuteAs)
     | _ -> None
 
-  let (|FunctionOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|FunctionOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.FunctionOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|InlineFunctionOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|InlineFunctionOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.InlineFunctionOption as node ->
       Some (node.OptionState)
     | _ -> None
 
-  let (|ExecuteAsFunctionOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ExecuteAsFunctionOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ExecuteAsFunctionOption as node ->
       Some (node.ExecuteAs)
@@ -335,7 +335,7 @@ module ActivePatterns =
       Some (node.Identifier)
     | _ -> None
 
-  let (|CommonTableExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|CommonTableExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.CommonTableExpression as node ->
       Some (node.ExpressionName, node.Columns |> Seq.toList, node.QueryExpression)
@@ -353,25 +353,25 @@ module ActivePatterns =
       Some (node.DeclareTableVariableBody)
     | _ -> None
 
-  let (|DataTypeReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|DataTypeRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.DataTypeReference as node ->
       Some (node.Name)
     | _ -> None
 
-  let (|ParameterizedDataTypeReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ParameterizedDataTypeRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ParameterizedDataTypeReference as node ->
       Some (node.Parameters |> Seq.toList)
     | _ -> None
 
-  let (|SqlDataTypeReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|SqlDataTypeRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.SqlDataTypeReference as node ->
       Some (node.SqlDataTypeOption)
     | _ -> None
 
-  let (|XmlDataTypeReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|XmlDataTypeRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.XmlDataTypeReference as node ->
       Some (node.XmlDataTypeOption, node.XmlSchemaCollection)
@@ -389,7 +389,7 @@ module ActivePatterns =
       Some (node.SelectStatement)
     | _ -> None
 
-  let (|TableDefinition|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|TableDef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.TableDefinition as node ->
       Some (node.ColumnDefinitions |> Seq.toList, node.TableConstraints |> Seq.toList, node.Indexes |> Seq.toList, node.SystemTimePeriod)
@@ -413,7 +413,7 @@ module ActivePatterns =
       Some (node.Alias)
     | _ -> None
 
-  let (|NamedTableReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|NamedTableRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.NamedTableReference as node ->
       Some (node.SchemaObject, node.TableHints |> Seq.toList, node.TableSampleClause, node.TemporalClause)
@@ -425,7 +425,7 @@ module ActivePatterns =
       Some (node.Columns |> Seq.toList)
     | _ -> None
 
-  let (|SchemaObjectFunctionTableReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|SchemaObjectFunctionTableRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.SchemaObjectFunctionTableReference as node ->
       Some (node.SchemaObject, node.Parameters |> Seq.toList)
@@ -515,7 +515,7 @@ module ActivePatterns =
       Some (node.Options |> Seq.toList)
     | _ -> None
 
-  let (|XmlForClauseOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|XmlForClauseOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.XmlForClauseOption as node ->
       Some (node.OptionKind, node.Value)
@@ -527,7 +527,7 @@ module ActivePatterns =
       Some (node.Options |> Seq.toList)
     | _ -> None
 
-  let (|JsonForClauseOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|JsonForClauseOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.JsonForClauseOption as node ->
       Some (node.OptionKind, node.Value)
@@ -599,31 +599,31 @@ module ActivePatterns =
       Some (node.WhenExpression)
     | _ -> None
 
-  let (|CaseExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|CaseExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.CaseExpression as node ->
       Some (node.ElseExpression)
     | _ -> None
 
-  let (|SimpleCaseExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|SimpleCaseExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.SimpleCaseExpression as node ->
       Some (node.InputExpression, node.WhenClauses |> Seq.toList)
     | _ -> None
 
-  let (|SearchedCaseExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|SearchedCaseExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.SearchedCaseExpression as node ->
       Some (node.WhenClauses |> Seq.toList)
     | _ -> None
 
-  let (|NullIfExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|NullIfExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.NullIfExpression as node ->
       Some (node.FirstExpression, node.SecondExpression)
     | _ -> None
 
-  let (|CoalesceExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|CoalesceExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.CoalesceExpression as node ->
       Some (node.Expressions |> Seq.toList)
@@ -635,31 +635,31 @@ module ActivePatterns =
       Some (node.Predicate, node.ThenExpression, node.ElseExpression)
     | _ -> None
 
-  let (|FullTextTableReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|FullTextTableRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.FullTextTableReference as node ->
       Some (node.FullTextFunctionType, node.TableName, node.Columns |> Seq.toList, node.SearchCondition, node.TopN, node.Language, node.PropertyName)
     | _ -> None
 
-  let (|SemanticTableReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|SemanticTableRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.SemanticTableReference as node ->
       Some (node.SemanticFunctionType, node.TableName, node.Columns |> Seq.toList, node.SourceKey, node.MatchedColumn, node.MatchedKey)
     | _ -> None
 
-  let (|OpenXmlTableReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|OpenXmlTableRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.OpenXmlTableReference as node ->
       Some (node.Variable, node.RowPattern, node.Flags, node.SchemaDeclarationItems |> Seq.toList, node.TableName)
     | _ -> None
 
-  let (|OpenJsonTableReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|OpenJsonTableRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.OpenJsonTableReference as node ->
       Some (node.Variable, node.RowPattern, node.SchemaDeclarationItems |> Seq.toList)
     | _ -> None
 
-  let (|OpenRowsetTableReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|OpenRowsetTableRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.OpenRowsetTableReference as node ->
       Some (node.ProviderName, node.DataSource, node.UserId, node.Password, node.ProviderString, node.Query, node.Object)
@@ -677,13 +677,13 @@ module ActivePatterns =
       Some (node.DataFile, node.Options |> Seq.toList)
     | _ -> None
 
-  let (|OpenQueryTableReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|OpenQueryTableRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.OpenQueryTableReference as node ->
       Some (node.LinkedServer, node.Query)
     | _ -> None
 
-  let (|AdHocTableReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|AdHocTableRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.AdHocTableReference as node ->
       Some (node.DataSource, node.Object)
@@ -809,7 +809,7 @@ module ActivePatterns =
       Some (node.Name, node.ParametersUsed, node.Parameters |> Seq.toList)
     | _ -> None
 
-  let (|ExtractFromExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ExtractFromExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ExtractFromExpression as node ->
       Some (node.Expression, node.ExtractedElement)
@@ -833,25 +833,25 @@ module ActivePatterns =
       Some (node.Options |> Seq.toList)
     | _ -> None
 
-  let (|AtomicBlockOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|AtomicBlockOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.AtomicBlockOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|LiteralAtomicBlockOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|LiteralAtomicBlockOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.LiteralAtomicBlockOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|IdentifierAtomicBlockOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|IdentifierAtomicBlockOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.IdentifierAtomicBlockOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|OnOffAtomicBlockOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|OnOffAtomicBlockOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.OnOffAtomicBlockOption as node ->
       Some (node.OptionState)
@@ -1181,7 +1181,7 @@ module ActivePatterns =
       Some (node.From, node.To)
     | _ -> None
 
-  let (|VariableReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|VariableRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.VariableReference as node ->
       Some (node.Name)
@@ -1199,37 +1199,37 @@ module ActivePatterns =
       Some (node.Value)
     | _ -> None
 
-  let (|GlobalVariableExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|GlobalVariableExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.GlobalVariableExpression as node ->
       Some (node.Name)
     | _ -> None
 
-  let (|IdentifierOrScalarExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|IdentifierOrScalarExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.IdentifierOrScalarExpression as node ->
       Some (node.Identifier, node.ScalarExpression)
     | _ -> None
 
-  let (|SchemaObjectNameOrValueExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|SchemaObjectNameOrValueExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.SchemaObjectNameOrValueExpression as node ->
       Some (node.SchemaObjectName, node.ValueExpression)
     | _ -> None
 
-  let (|ParenthesisExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ParenthesisExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ParenthesisExpression as node ->
       Some (node.Expression)
     | _ -> None
 
-  let (|ColumnReferenceExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ColumnReferenceExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ColumnReferenceExpression as node ->
       Some (node.ColumnType, node.MultiPartIdentifier)
     | _ -> None
 
-  let (|NextValueForExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|NextValueForExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.NextValueForExpression as node ->
       Some (node.SequenceName, node.OverClause)
@@ -1241,19 +1241,19 @@ module ActivePatterns =
       Some (node.Name, node.SequenceOptions |> Seq.toList)
     | _ -> None
 
-  let (|SequenceOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|SequenceOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.SequenceOption as node ->
       Some (node.OptionKind, node.NoValue)
     | _ -> None
 
-  let (|DataTypeSequenceOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|DataTypeSequenceOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.DataTypeSequenceOption as node ->
       Some (node.DataType)
     | _ -> None
 
-  let (|ScalarExpressionSequenceOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ScalarExpressionSequenceOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ScalarExpressionSequenceOption as node ->
       Some (node.OptionValue)
@@ -1277,7 +1277,7 @@ module ActivePatterns =
       Some (node.ActionType, node.SecurityPredicateType, node.FunctionCall, node.TargetObjectName, node.SecurityPredicateOperation)
     | _ -> None
 
-  let (|SecurityPolicyOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|SecurityPolicyOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.SecurityPolicyOption as node ->
       Some (node.OptionKind, node.OptionState)
@@ -1361,25 +1361,25 @@ module ActivePatterns =
       Some (node.SchemaObjectName, node.ColumnDefinitions |> Seq.toList, node.DataSource, node.ExternalTableOptions |> Seq.toList)
     | _ -> None
 
-  let (|ExternalTableOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ExternalTableOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ExternalTableOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|ExternalTableLiteralOrIdentifierOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ExternalTableLiteralOrIdentifierOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ExternalTableLiteralOrIdentifierOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|ExternalTableDistributionOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ExternalTableDistributionOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ExternalTableDistributionOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|ExternalTableRejectTypeOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ExternalTableRejectTypeOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ExternalTableRejectTypeOption as node ->
       Some (node.Value)
@@ -1397,13 +1397,13 @@ module ActivePatterns =
       Some (node.Name, node.DataSourceType, node.Location, node.ExternalDataSourceOptions |> Seq.toList)
     | _ -> None
 
-  let (|ExternalDataSourceOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ExternalDataSourceOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ExternalDataSourceOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|ExternalDataSourceLiteralOrIdentifierOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ExternalDataSourceLiteralOrIdentifierOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ExternalDataSourceLiteralOrIdentifierOption as node ->
       Some (node.Value)
@@ -1415,25 +1415,25 @@ module ActivePatterns =
       Some (node.Name, node.FormatType, node.ExternalFileFormatOptions |> Seq.toList)
     | _ -> None
 
-  let (|ExternalFileFormatOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ExternalFileFormatOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ExternalFileFormatOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|ExternalFileFormatLiteralOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ExternalFileFormatLiteralOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ExternalFileFormatLiteralOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|ExternalFileFormatUseDefaultTypeOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ExternalFileFormatUseDefaultTypeOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ExternalFileFormatUseDefaultTypeOption as node ->
       Some (node.ExternalFileFormatUseDefaultType)
     | _ -> None
 
-  let (|ExternalFileFormatContainerOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ExternalFileFormatContainerOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ExternalFileFormatContainerOption as node ->
       Some (node.Suboptions |> Seq.toList)
@@ -1457,19 +1457,19 @@ module ActivePatterns =
       Some (node.DropFiles |> Seq.toList, node.IsDropAll, node.AddFiles |> Seq.toList)
     | _ -> None
 
-  let (|AssemblyOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|AssemblyOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.AssemblyOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|OnOffAssemblyOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|OnOffAssemblyOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.OnOffAssemblyOption as node ->
       Some (node.OptionState)
     | _ -> None
 
-  let (|PermissionSetAssemblyOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|PermissionSetAssemblyOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.PermissionSetAssemblyOption as node ->
       Some (node.PermissionSetOption)
@@ -1541,73 +1541,73 @@ module ActivePatterns =
       Some (node.Options |> Seq.toList)
     | _ -> None
 
-  let (|TableOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|TableOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.TableOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|LockEscalationTableOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|LockEscalationTableOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.LockEscalationTableOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|FileStreamOnTableOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|FileStreamOnTableOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.FileStreamOnTableOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|FileTableDirectoryTableOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|FileTableDirectoryTableOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.FileTableDirectoryTableOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|FileTableCollateFileNameTableOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|FileTableCollateFileNameTableOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.FileTableCollateFileNameTableOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|FileTableConstraintNameTableOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|FileTableConstraintNameTableOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.FileTableConstraintNameTableOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|MemoryOptimizedTableOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|MemoryOptimizedTableOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.MemoryOptimizedTableOption as node ->
       Some (node.OptionState)
     | _ -> None
 
-  let (|DurabilityTableOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|DurabilityTableOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.DurabilityTableOption as node ->
       Some (node.DurabilityTableOptionKind)
     | _ -> None
 
-  let (|RemoteDataArchiveTableOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|RemoteDataArchiveTableOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.RemoteDataArchiveTableOption as node ->
       Some (node.RdaTableOption, node.MigrationState)
     | _ -> None
 
-  let (|RemoteDataArchiveAlterTableOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|RemoteDataArchiveAlterTableOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.RemoteDataArchiveAlterTableOption as node ->
       Some (node.RdaTableOption, node.MigrationState, node.IsMigrationStateSpecified, node.IsFilterPredicateSpecified, node.FilterPredicate)
     | _ -> None
 
-  let (|DatabaseOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|DatabaseOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.DatabaseOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|RemoteDataArchiveDatabaseOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|RemoteDataArchiveDatabaseOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.RemoteDataArchiveDatabaseOption as node ->
       Some (node.OptionState, node.Settings |> Seq.toList)
@@ -1637,13 +1637,13 @@ module ActivePatterns =
       Some (node.IsOn)
     | _ -> None
 
-  let (|RetentionPeriodDefinition|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|RetentionPeriodDef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.RetentionPeriodDefinition as node ->
       Some (node.Duration, node.Units, node.IsInfinity)
     | _ -> None
 
-  let (|SystemVersioningTableOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|SystemVersioningTableOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.SystemVersioningTableOption as node ->
       Some (node.OptionState, node.ConsistencyCheckEnabled, node.HistoryTable, node.RetentionPeriod)
@@ -1667,43 +1667,43 @@ module ActivePatterns =
       Some (node.SourcePartitionNumber, node.TargetPartitionNumber, node.TargetTable, node.Options |> Seq.toList)
     | _ -> None
 
-  let (|TableSwitchOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|TableSwitchOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.TableSwitchOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|LowPriorityLockWaitTableSwitchOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|LowPriorityLockWaitTableSwitchOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.LowPriorityLockWaitTableSwitchOption as node ->
       Some (node.Options |> Seq.toList)
     | _ -> None
 
-  let (|DropClusteredConstraintOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|DropClusteredConstraintOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.DropClusteredConstraintOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|DropClusteredConstraintStateOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|DropClusteredConstraintStateOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.DropClusteredConstraintStateOption as node ->
       Some (node.OptionState)
     | _ -> None
 
-  let (|DropClusteredConstraintValueOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|DropClusteredConstraintValueOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.DropClusteredConstraintValueOption as node ->
       Some (node.OptionValue)
     | _ -> None
 
-  let (|DropClusteredConstraintMoveOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|DropClusteredConstraintMoveOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.DropClusteredConstraintMoveOption as node ->
       Some (node.OptionValue)
     | _ -> None
 
-  let (|DropClusteredConstraintWaitAtLowPriorityLockOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|DropClusteredConstraintWaitAtLowPriorityLockOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.DropClusteredConstraintWaitAtLowPriorityLockOption as node ->
       Some (node.Options |> Seq.toList)
@@ -1769,37 +1769,37 @@ module ActivePatterns =
       Some (node.ExecuteAsOption, node.Literal)
     | _ -> None
 
-  let (|QueueOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|QueueOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.QueueOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|QueueStateOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|QueueStateOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.QueueStateOption as node ->
       Some (node.OptionState)
     | _ -> None
 
-  let (|QueueProcedureOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|QueueProcedureOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.QueueProcedureOption as node ->
       Some (node.OptionValue)
     | _ -> None
 
-  let (|QueueValueOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|QueueValueOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.QueueValueOption as node ->
       Some (node.OptionValue)
     | _ -> None
 
-  let (|QueueExecuteAsOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|QueueExecuteAsOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.QueueExecuteAsOption as node ->
       Some (node.OptionValue)
     | _ -> None
 
-  let (|RouteOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|RouteOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.RouteOption as node ->
       Some (node.OptionKind, node.Literal)
@@ -1829,13 +1829,13 @@ module ActivePatterns =
       Some (node.OnFileGroup)
     | _ -> None
 
-  let (|IndexDefinition|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|IndexDef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.IndexDefinition as node ->
       Some (node.Name, node.Unique, node.IndexType, node.IndexOptions |> Seq.toList, node.Columns |> Seq.toList, node.OnFileGroupOrPartitionScheme, node.FilterPredicate, node.FileStreamOn)
     | _ -> None
 
-  let (|SystemTimePeriodDefinition|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|SystemTimePeriodDef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.SystemTimePeriodDefinition as node ->
       Some (node.StartTimeColumn, node.EndTimeColumn)
@@ -1889,73 +1889,73 @@ module ActivePatterns =
       Some (node.Translated80SyntaxTo90, node.Unique, (if node.Clustered.HasValue then Some node.Clustered.Value else None), node.Columns |> Seq.toList, node.IncludeColumns |> Seq.toList, node.OnFileGroupOrPartitionScheme, node.FilterPredicate, node.FileStreamOn)
     | _ -> None
 
-  let (|IndexOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|IndexOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.IndexOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|IndexStateOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|IndexStateOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.IndexStateOption as node ->
       Some (node.OptionState)
     | _ -> None
 
-  let (|IndexExpressionOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|IndexExpressionOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.IndexExpressionOption as node ->
       Some (node.Expression)
     | _ -> None
 
-  let (|MaxDurationOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|MaxDurationOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.MaxDurationOption as node ->
       Some (node.MaxDuration, (if node.Unit.HasValue then Some node.Unit.Value else None))
     | _ -> None
 
-  let (|WaitAtLowPriorityOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|WaitAtLowPriorityOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.WaitAtLowPriorityOption as node ->
       Some (node.Options |> Seq.toList)
     | _ -> None
 
-  let (|OnlineIndexOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|OnlineIndexOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.OnlineIndexOption as node ->
       Some (node.LowPriorityLockWaitOption)
     | _ -> None
 
-  let (|IgnoreDupKeyIndexOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|IgnoreDupKeyIndexOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.IgnoreDupKeyIndexOption as node ->
       Some ((if node.SuppressMessagesOption.HasValue then Some node.SuppressMessagesOption.Value else None))
     | _ -> None
 
-  let (|OrderIndexOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|OrderIndexOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.OrderIndexOption as node ->
       Some (node.Columns |> Seq.toList)
     | _ -> None
 
-  let (|OnlineIndexLowPriorityLockWaitOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|OnlineIndexLowPriorityLockWaitOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.OnlineIndexLowPriorityLockWaitOption as node ->
       Some (node.Options |> Seq.toList)
     | _ -> None
 
-  let (|LowPriorityLockWaitOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|LowPriorityLockWaitOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.LowPriorityLockWaitOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|LowPriorityLockWaitMaxDurationOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|LowPriorityLockWaitMaxDurationOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.LowPriorityLockWaitMaxDurationOption as node ->
       Some (node.MaxDuration, (if node.Unit.HasValue then Some node.Unit.Value else None))
     | _ -> None
 
-  let (|LowPriorityLockWaitAbortAfterWaitOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|LowPriorityLockWaitAbortAfterWaitOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.LowPriorityLockWaitAbortAfterWaitOption as node ->
       Some (node.AbortAfterWait)
@@ -1973,25 +1973,25 @@ module ActivePatterns =
       Some (node.OnName, node.FullTextIndexColumns |> Seq.toList, node.KeyIndexName, node.CatalogAndFileGroup, node.Options |> Seq.toList)
     | _ -> None
 
-  let (|FullTextIndexOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|FullTextIndexOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.FullTextIndexOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|ChangeTrackingFullTextIndexOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ChangeTrackingFullTextIndexOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ChangeTrackingFullTextIndexOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|StopListFullTextIndexOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|StopListFullTextIndexOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.StopListFullTextIndexOption as node ->
       Some (node.IsOff, node.StopListName)
     | _ -> None
 
-  let (|SearchPropertyListFullTextIndexOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|SearchPropertyListFullTextIndexOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.SearchPropertyListFullTextIndexOption as node ->
       Some (node.IsOff, node.PropertyListName)
@@ -2039,7 +2039,7 @@ module ActivePatterns =
       Some (node.Option)
     | _ -> None
 
-  let (|ApplicationRoleOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ApplicationRoleOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ApplicationRoleOption as node ->
       Some (node.OptionKind, node.Value)
@@ -2087,7 +2087,7 @@ module ActivePatterns =
       Some (node.Member)
     | _ -> None
 
-  let (|UserLoginOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|UserLoginOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.UserLoginOption as node ->
       Some (node.UserLoginOptionType, node.Identifier)
@@ -2105,13 +2105,13 @@ module ActivePatterns =
       Some (node.UserLoginOption)
     | _ -> None
 
-  let (|StatisticsOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|StatisticsOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.StatisticsOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|ResampleStatisticsOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ResampleStatisticsOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ResampleStatisticsOption as node ->
       Some (node.Partitions |> Seq.toList)
@@ -2123,13 +2123,13 @@ module ActivePatterns =
       Some (node.From, node.To)
     | _ -> None
 
-  let (|OnOffStatisticsOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|OnOffStatisticsOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.OnOffStatisticsOption as node ->
       Some (node.OptionState)
     | _ -> None
 
-  let (|LiteralStatisticsOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|LiteralStatisticsOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.LiteralStatisticsOption as node ->
       Some (node.Literal)
@@ -2159,13 +2159,13 @@ module ActivePatterns =
       Some (node.Name, node.CursorDefinition)
     | _ -> None
 
-  let (|CursorDefinition|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|CursorDef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.CursorDefinition as node ->
       Some (node.Options |> Seq.toList, node.Select)
     | _ -> None
 
-  let (|CursorOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|CursorOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.CursorOption as node ->
       Some (node.OptionKind)
@@ -2261,13 +2261,13 @@ module ActivePatterns =
       Some (node.Index, node.Object, node.Options |> Seq.toList)
     | _ -> None
 
-  let (|MoveToDropIndexOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|MoveToDropIndexOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.MoveToDropIndexOption as node ->
       Some (node.MoveTo)
     | _ -> None
 
-  let (|FileStreamOnDropIndexOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|FileStreamOnDropIndexOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.FileStreamOnDropIndexOption as node ->
       Some (node.FileStreamOn)
@@ -2441,43 +2441,43 @@ module ActivePatterns =
       Some (node.Options |> Seq.toList, node.IsPrimary)
     | _ -> None
 
-  let (|FileDeclarationOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|FileDeclarationOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.FileDeclarationOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|NameFileDeclarationOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|NameFileDeclarationOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.NameFileDeclarationOption as node ->
       Some (node.LogicalFileName, node.IsNewName)
     | _ -> None
 
-  let (|FileNameFileDeclarationOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|FileNameFileDeclarationOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.FileNameFileDeclarationOption as node ->
       Some (node.OSFileName)
     | _ -> None
 
-  let (|SizeFileDeclarationOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|SizeFileDeclarationOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.SizeFileDeclarationOption as node ->
       Some (node.Size, node.Units)
     | _ -> None
 
-  let (|MaxSizeFileDeclarationOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|MaxSizeFileDeclarationOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.MaxSizeFileDeclarationOption as node ->
       Some (node.MaxSize, node.Units, node.Unlimited)
     | _ -> None
 
-  let (|FileGrowthFileDeclarationOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|FileGrowthFileDeclarationOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.FileGrowthFileDeclarationOption as node ->
       Some (node.GrowthIncrement, node.Units)
     | _ -> None
 
-  let (|FileGroupDefinition|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|FileGroupDef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.FileGroupDefinition as node ->
       Some (node.Name, node.FileDeclarations |> Seq.toList, node.IsDefault, node.ContainsFileStream, node.ContainsMemoryOptimizedData)
@@ -2507,31 +2507,31 @@ module ActivePatterns =
       Some (node.Option)
     | _ -> None
 
-  let (|DatabaseConfigurationClearOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|DatabaseConfigurationClearOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.DatabaseConfigurationClearOption as node ->
       Some (node.OptionKind, node.PlanHandle)
     | _ -> None
 
-  let (|DatabaseConfigurationSetOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|DatabaseConfigurationSetOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.DatabaseConfigurationSetOption as node ->
       Some (node.OptionKind, node.GenericOptionKind)
     | _ -> None
 
-  let (|OnOffPrimaryConfigurationOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|OnOffPrimaryConfigurationOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.OnOffPrimaryConfigurationOption as node ->
       Some (node.OptionState)
     | _ -> None
 
-  let (|MaxDopConfigurationOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|MaxDopConfigurationOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.MaxDopConfigurationOption as node ->
       Some (node.Value, node.Primary)
     | _ -> None
 
-  let (|GenericConfigurationOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|GenericConfigurationOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.GenericConfigurationOption as node ->
       Some (node.GenericOptionState)
@@ -2603,97 +2603,97 @@ module ActivePatterns =
       Some (node.Termination, node.Options |> Seq.toList)
     | _ -> None
 
-  let (|OnOffDatabaseOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|OnOffDatabaseOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.OnOffDatabaseOption as node ->
       Some (node.OptionState)
     | _ -> None
 
-  let (|AutoCreateStatisticsDatabaseOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|AutoCreateStatisticsDatabaseOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.AutoCreateStatisticsDatabaseOption as node ->
       Some (node.HasIncremental, node.IncrementalState)
     | _ -> None
 
-  let (|ContainmentDatabaseOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ContainmentDatabaseOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ContainmentDatabaseOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|HadrDatabaseOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|HadrDatabaseOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.HadrDatabaseOption as node ->
       Some (node.HadrOption)
     | _ -> None
 
-  let (|HadrAvailabilityGroupDatabaseOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|HadrAvailabilityGroupDatabaseOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.HadrAvailabilityGroupDatabaseOption as node ->
       Some (node.GroupName)
     | _ -> None
 
-  let (|DelayedDurabilityDatabaseOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|DelayedDurabilityDatabaseOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.DelayedDurabilityDatabaseOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|CursorDefaultDatabaseOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|CursorDefaultDatabaseOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.CursorDefaultDatabaseOption as node ->
       Some (node.IsLocal)
     | _ -> None
 
-  let (|RecoveryDatabaseOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|RecoveryDatabaseOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.RecoveryDatabaseOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|TargetRecoveryTimeDatabaseOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|TargetRecoveryTimeDatabaseOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.TargetRecoveryTimeDatabaseOption as node ->
       Some (node.RecoveryTime, node.Unit)
     | _ -> None
 
-  let (|PageVerifyDatabaseOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|PageVerifyDatabaseOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.PageVerifyDatabaseOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|PartnerDatabaseOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|PartnerDatabaseOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.PartnerDatabaseOption as node ->
       Some (node.PartnerServer, node.PartnerOption, node.Timeout)
     | _ -> None
 
-  let (|WitnessDatabaseOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|WitnessDatabaseOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.WitnessDatabaseOption as node ->
       Some (node.WitnessServer, node.IsOff)
     | _ -> None
 
-  let (|ParameterizationDatabaseOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ParameterizationDatabaseOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ParameterizationDatabaseOption as node ->
       Some (node.IsSimple)
     | _ -> None
 
-  let (|LiteralDatabaseOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|LiteralDatabaseOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.LiteralDatabaseOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|IdentifierDatabaseOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|IdentifierDatabaseOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.IdentifierDatabaseOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|ChangeTrackingDatabaseOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ChangeTrackingDatabaseOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ChangeTrackingDatabaseOption as node ->
       Some (node.OptionState, node.Details |> Seq.toList)
@@ -2711,91 +2711,91 @@ module ActivePatterns =
       Some (node.RetentionPeriod, node.Unit)
     | _ -> None
 
-  let (|QueryStoreDatabaseOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|QueryStoreDatabaseOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.QueryStoreDatabaseOption as node ->
       Some (node.Clear, node.ClearAll, node.OptionState, node.Options |> Seq.toList)
     | _ -> None
 
-  let (|QueryStoreOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|QueryStoreOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.QueryStoreOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|QueryStoreDesiredStateOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|QueryStoreDesiredStateOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.QueryStoreDesiredStateOption as node ->
       Some (node.Value, node.OperationModeSpecified)
     | _ -> None
 
-  let (|QueryStoreCapturePolicyOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|QueryStoreCapturePolicyOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.QueryStoreCapturePolicyOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|QueryStoreSizeCleanupPolicyOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|QueryStoreSizeCleanupPolicyOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.QueryStoreSizeCleanupPolicyOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|QueryStoreDataFlushIntervalOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|QueryStoreDataFlushIntervalOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.QueryStoreDataFlushIntervalOption as node ->
       Some (node.FlushInterval)
     | _ -> None
 
-  let (|QueryStoreIntervalLengthOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|QueryStoreIntervalLengthOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.QueryStoreIntervalLengthOption as node ->
       Some (node.StatsIntervalLength)
     | _ -> None
 
-  let (|QueryStoreMaxStorageSizeOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|QueryStoreMaxStorageSizeOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.QueryStoreMaxStorageSizeOption as node ->
       Some (node.MaxQdsSize)
     | _ -> None
 
-  let (|QueryStoreMaxPlansPerQueryOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|QueryStoreMaxPlansPerQueryOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.QueryStoreMaxPlansPerQueryOption as node ->
       Some (node.MaxPlansPerQuery)
     | _ -> None
 
-  let (|QueryStoreTimeCleanupPolicyOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|QueryStoreTimeCleanupPolicyOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.QueryStoreTimeCleanupPolicyOption as node ->
       Some (node.StaleQueryThreshold)
     | _ -> None
 
-  let (|AutomaticTuningDatabaseOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|AutomaticTuningDatabaseOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.AutomaticTuningDatabaseOption as node ->
       Some (node.AutomaticTuningState, node.Options |> Seq.toList)
     | _ -> None
 
-  let (|AutomaticTuningOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|AutomaticTuningOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.AutomaticTuningOption as node ->
       Some (node.OptionKind, node.Value)
     | _ -> None
 
-  let (|FileStreamDatabaseOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|FileStreamDatabaseOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.FileStreamDatabaseOption as node ->
       Some ((if node.NonTransactedAccess.HasValue then Some node.NonTransactedAccess.Value else None), node.DirectoryName)
     | _ -> None
 
-  let (|CatalogCollationOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|CatalogCollationOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.CatalogCollationOption as node ->
       Some ((if node.CatalogCollation.HasValue then Some node.CatalogCollation.Value else None))
     | _ -> None
 
-  let (|MaxSizeDatabaseOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|MaxSizeDatabaseOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.MaxSizeDatabaseOption as node ->
       Some (node.MaxSize, node.Units)
@@ -2819,13 +2819,13 @@ module ActivePatterns =
       Some (node.ColumnIdentifier, node.DataType, node.Collation)
     | _ -> None
 
-  let (|ColumnDefinition|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ColumnDef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ColumnDefinition as node ->
       Some (node.ComputedColumnExpression, node.IsPersisted, node.DefaultConstraint, node.IdentityOptions, node.IsRowGuidCol, node.Constraints |> Seq.toList, node.StorageOptions, node.Index, (if node.GeneratedAlways.HasValue then Some node.GeneratedAlways.Value else None), node.IsHidden, node.Encryption, node.IsMasked, node.MaskingFunction)
     | _ -> None
 
-  let (|ColumnEncryptionDefinition|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ColumnEncryptionDef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ColumnEncryptionDefinition as node ->
       Some (node.Parameters |> Seq.toList)
@@ -2867,7 +2867,7 @@ module ActivePatterns =
       Some (node.IsFileStream, node.SparseOption)
     | _ -> None
 
-  let (|ConstraintDefinition|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ConstraintDef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ConstraintDefinition as node ->
       Some (node.ConstraintIdentifier)
@@ -2885,13 +2885,13 @@ module ActivePatterns =
       Some (node.DistributionName, node.ColumnName)
     | _ -> None
 
-  let (|TableDataCompressionOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|TableDataCompressionOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.TableDataCompressionOption as node ->
       Some (node.DataCompressionOption)
     | _ -> None
 
-  let (|TableDistributionOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|TableDistributionOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.TableDistributionOption as node ->
       Some (node.Value)
@@ -2903,7 +2903,7 @@ module ActivePatterns =
       Some (node.DistributionColumn)
     | _ -> None
 
-  let (|TableIndexOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|TableIndexOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.TableIndexOption as node ->
       Some (node.Value)
@@ -2915,7 +2915,7 @@ module ActivePatterns =
       Some (node.Columns |> Seq.toList, node.ColumnStore)
     | _ -> None
 
-  let (|TablePartitionOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|TablePartitionOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.TablePartitionOption as node ->
       Some (node.PartitionColumn, node.PartitionOptionSpecs)
@@ -2927,7 +2927,7 @@ module ActivePatterns =
       Some (node.Range, node.BoundaryValues |> Seq.toList)
     | _ -> None
 
-  let (|DataCompressionOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|DataCompressionOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.DataCompressionOption as node ->
       Some (node.CompressionLevel, node.PartitionRanges |> Seq.toList)
@@ -2939,25 +2939,25 @@ module ActivePatterns =
       Some (node.From, node.To)
     | _ -> None
 
-  let (|CheckConstraintDefinition|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|CheckConstraintDef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.CheckConstraintDefinition as node ->
       Some (node.CheckCondition, node.NotForReplication)
     | _ -> None
 
-  let (|DefaultConstraintDefinition|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|DefaultConstraintDef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.DefaultConstraintDefinition as node ->
       Some (node.Expression, node.WithValues, node.Column)
     | _ -> None
 
-  let (|ForeignKeyConstraintDefinition|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ForeignKeyConstraintDef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ForeignKeyConstraintDefinition as node ->
       Some (node.Columns |> Seq.toList, node.ReferenceTableName, node.ReferencedTableColumns |> Seq.toList, node.DeleteAction, node.UpdateAction, node.NotForReplication)
     | _ -> None
 
-  let (|NullableConstraintDefinition|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|NullableConstraintDef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.NullableConstraintDefinition as node ->
       Some (node.Nullable)
@@ -2969,13 +2969,13 @@ module ActivePatterns =
       Some (node.FromNode, node.ToNode)
     | _ -> None
 
-  let (|GraphConnectionConstraintDefinition|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|GraphConnectionConstraintDef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.GraphConnectionConstraintDefinition as node ->
       Some (node.FromNodeToNodeList |> Seq.toList)
     | _ -> None
 
-  let (|UniqueConstraintDefinition|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|UniqueConstraintDef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.UniqueConstraintDefinition as node ->
       Some ((if node.Clustered.HasValue then Some node.Clustered.Value else None), node.IsPrimaryKey, node.Columns |> Seq.toList, node.IndexOptions |> Seq.toList, node.OnFileGroupOrPartitionScheme, node.IndexType, node.FileStreamOn)
@@ -2999,43 +2999,43 @@ module ActivePatterns =
       Some (node.DatabaseName, node.Devices |> Seq.toList, node.Files |> Seq.toList, node.Options |> Seq.toList, node.Kind)
     | _ -> None
 
-  let (|RestoreOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|RestoreOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.RestoreOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|ScalarExpressionRestoreOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ScalarExpressionRestoreOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ScalarExpressionRestoreOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|MoveRestoreOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|MoveRestoreOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.MoveRestoreOption as node ->
       Some (node.LogicalFileName, node.OSFileName)
     | _ -> None
 
-  let (|StopRestoreOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|StopRestoreOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.StopRestoreOption as node ->
       Some (node.Mark, node.After, node.IsStopAt)
     | _ -> None
 
-  let (|FileStreamRestoreOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|FileStreamRestoreOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.FileStreamRestoreOption as node ->
       Some (node.FileStreamOption)
     | _ -> None
 
-  let (|BackupOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|BackupOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.BackupOption as node ->
       Some (node.OptionKind, node.Value)
     | _ -> None
 
-  let (|BackupEncryptionOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|BackupEncryptionOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.BackupEncryptionOption as node ->
       Some (node.Algorithm, node.Encryptor)
@@ -3077,31 +3077,31 @@ module ActivePatterns =
       Some (node.ColumnDefinitions |> Seq.toList)
     | _ -> None
 
-  let (|BulkInsertOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|BulkInsertOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.BulkInsertOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|LiteralBulkInsertOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|LiteralBulkInsertOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.LiteralBulkInsertOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|OrderBulkInsertOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|OrderBulkInsertOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.OrderBulkInsertOption as node ->
       Some (node.Columns |> Seq.toList, node.IsUnique)
     | _ -> None
 
-  let (|ExternalTableColumnDefinition|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ExternalTableColumnDef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ExternalTableColumnDefinition as node ->
       Some (node.ColumnDefinition, node.NullableConstraint)
     | _ -> None
 
-  let (|InsertBulkColumnDefinition|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|InsertBulkColumnDef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.InsertBulkColumnDefinition as node ->
       Some (node.Column, node.NullNotNull)
@@ -3113,7 +3113,7 @@ module ActivePatterns =
       Some (node.DllName, node.Command, node.ParenthesisRequired, node.Literals |> Seq.toList, node.Options |> Seq.toList, node.OptionsUseJoin)
     | _ -> None
 
-  let (|DbccOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|DbccOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.DbccOption as node ->
       Some (node.OptionKind)
@@ -3155,19 +3155,19 @@ module ActivePatterns =
       Some (node.Name, node.Options |> Seq.toList)
     | _ -> None
 
-  let (|RemoteServiceBindingOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|RemoteServiceBindingOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.RemoteServiceBindingOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|OnOffRemoteServiceBindingOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|OnOffRemoteServiceBindingOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.OnOffRemoteServiceBindingOption as node ->
       Some (node.OptionState)
     | _ -> None
 
-  let (|UserRemoteServiceBindingOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|UserRemoteServiceBindingOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.UserRemoteServiceBindingOption as node ->
       Some (node.User)
@@ -3215,7 +3215,7 @@ module ActivePatterns =
       Some (node.CertificateSource, node.CertificateOptions |> Seq.toList, node.Owner)
     | _ -> None
 
-  let (|CertificateOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|CertificateOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.CertificateOption as node ->
       Some (node.Kind, node.Value)
@@ -3281,37 +3281,37 @@ module ActivePatterns =
       Some (node.Kind, node.Value)
     | _ -> None
 
-  let (|EndpointProtocolOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|EndpointProtocolOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.EndpointProtocolOption as node ->
       Some (node.Kind)
     | _ -> None
 
-  let (|LiteralEndpointProtocolOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|LiteralEndpointProtocolOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.LiteralEndpointProtocolOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|AuthenticationEndpointProtocolOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|AuthenticationEndpointProtocolOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.AuthenticationEndpointProtocolOption as node ->
       Some (node.AuthenticationTypes)
     | _ -> None
 
-  let (|PortsEndpointProtocolOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|PortsEndpointProtocolOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.PortsEndpointProtocolOption as node ->
       Some (node.PortTypes)
     | _ -> None
 
-  let (|CompressionEndpointProtocolOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|CompressionEndpointProtocolOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.CompressionEndpointProtocolOption as node ->
       Some (node.IsEnabled)
     | _ -> None
 
-  let (|ListenerIPEndpointProtocolOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ListenerIPEndpointProtocolOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ListenerIPEndpointProtocolOption as node ->
       Some (node.IsAll, node.IPv6, node.IPv4PartOne, node.IPv4PartTwo)
@@ -3323,7 +3323,7 @@ module ActivePatterns =
       Some (node.OctetOne, node.OctetTwo, node.OctetThree, node.OctetFour)
     | _ -> None
 
-  let (|PayloadOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|PayloadOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.PayloadOption as node ->
       Some (node.Kind)
@@ -3335,61 +3335,61 @@ module ActivePatterns =
       Some (node.Alias, node.Namespace, node.Action, node.Name, node.Format, node.Schema)
     | _ -> None
 
-  let (|EnabledDisabledPayloadOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|EnabledDisabledPayloadOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.EnabledDisabledPayloadOption as node ->
       Some (node.IsEnabled)
     | _ -> None
 
-  let (|WsdlPayloadOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|WsdlPayloadOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.WsdlPayloadOption as node ->
       Some (node.IsNone, node.Value)
     | _ -> None
 
-  let (|LoginTypePayloadOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|LoginTypePayloadOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.LoginTypePayloadOption as node ->
       Some (node.IsWindows)
     | _ -> None
 
-  let (|LiteralPayloadOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|LiteralPayloadOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.LiteralPayloadOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|SessionTimeoutPayloadOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|SessionTimeoutPayloadOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.SessionTimeoutPayloadOption as node ->
       Some (node.IsNever, node.Timeout)
     | _ -> None
 
-  let (|SchemaPayloadOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|SchemaPayloadOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.SchemaPayloadOption as node ->
       Some (node.IsStandard)
     | _ -> None
 
-  let (|CharacterSetPayloadOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|CharacterSetPayloadOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.CharacterSetPayloadOption as node ->
       Some (node.IsSql)
     | _ -> None
 
-  let (|RolePayloadOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|RolePayloadOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.RolePayloadOption as node ->
       Some (node.Role)
     | _ -> None
 
-  let (|AuthenticationPayloadOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|AuthenticationPayloadOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.AuthenticationPayloadOption as node ->
       Some (node.Protocol, node.Certificate, node.TryCertificateFirst)
     | _ -> None
 
-  let (|EncryptionPayloadOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|EncryptionPayloadOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.EncryptionPayloadOption as node ->
       Some (node.EncryptionSupport, node.AlgorithmPartOne, node.AlgorithmPartTwo)
@@ -3407,37 +3407,37 @@ module ActivePatterns =
       Some (node.KeyOptions |> Seq.toList, node.Provider, node.Owner)
     | _ -> None
 
-  let (|KeyOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|KeyOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.KeyOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|KeySourceKeyOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|KeySourceKeyOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.KeySourceKeyOption as node ->
       Some (node.PassPhrase)
     | _ -> None
 
-  let (|AlgorithmKeyOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|AlgorithmKeyOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.AlgorithmKeyOption as node ->
       Some (node.Algorithm)
     | _ -> None
 
-  let (|IdentityValueKeyOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|IdentityValueKeyOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.IdentityValueKeyOption as node ->
       Some (node.IdentityPhrase)
     | _ -> None
 
-  let (|ProviderKeyNameKeyOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ProviderKeyNameKeyOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ProviderKeyNameKeyOption as node ->
       Some (node.KeyName)
     | _ -> None
 
-  let (|CreationDispositionKeyOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|CreationDispositionKeyOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.CreationDispositionKeyOption as node ->
       Some (node.IsCreateNew)
@@ -3455,13 +3455,13 @@ module ActivePatterns =
       Some (node.Name, node.Options |> Seq.toList)
     | _ -> None
 
-  let (|FullTextCatalogOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|FullTextCatalogOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.FullTextCatalogOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|OnOffFullTextCatalogOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|OnOffFullTextCatalogOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.OnOffFullTextCatalogOption as node ->
       Some (node.OptionState)
@@ -3497,19 +3497,19 @@ module ActivePatterns =
       Some (node.Name, node.Action)
     | _ -> None
 
-  let (|BinaryExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|BinaryExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.BinaryExpression as node ->
       Some (node.BinaryExpressionType, node.FirstExpression, node.SecondExpression)
     | _ -> None
 
-  let (|BuiltInFunctionTableReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|BuiltInFunctionTableRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.BuiltInFunctionTableReference as node ->
       Some (node.Name, node.Parameters |> Seq.toList)
     | _ -> None
 
-  let (|GlobalFunctionTableReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|GlobalFunctionTableRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.GlobalFunctionTableReference as node ->
       Some (node.Name, node.Parameters |> Seq.toList)
@@ -3527,19 +3527,19 @@ module ActivePatterns =
       Some (node.ComputeFunctionType, node.Expression)
     | _ -> None
 
-  let (|PivotedTableReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|PivotedTableRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.PivotedTableReference as node ->
       Some (node.TableReference, node.InColumns |> Seq.toList, node.PivotColumn, node.ValueColumns |> Seq.toList, node.AggregateFunctionIdentifier)
     | _ -> None
 
-  let (|UnpivotedTableReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|UnpivotedTableRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.UnpivotedTableReference as node ->
       Some (node.TableReference, node.InColumns |> Seq.toList, node.PivotColumn, node.ValueColumn)
     | _ -> None
 
-  let (|JoinTableReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|JoinTableRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.JoinTableReference as node ->
       Some (node.FirstTableReference, node.SecondTableReference)
@@ -3557,31 +3557,31 @@ module ActivePatterns =
       Some (node.System, node.SampleNumber, node.TableSampleClauseOption, node.RepeatSeed)
     | _ -> None
 
-  let (|BooleanNotExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|BooleanNotExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.BooleanNotExpression as node ->
       Some (node.Expression)
     | _ -> None
 
-  let (|BooleanParenthesisExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|BooleanParenthesisExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.BooleanParenthesisExpression as node ->
       Some (node.Expression)
     | _ -> None
 
-  let (|BooleanComparisonExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|BooleanComparisonExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.BooleanComparisonExpression as node ->
       Some (node.ComparisonType, node.FirstExpression, node.SecondExpression)
     | _ -> None
 
-  let (|BooleanBinaryExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|BooleanBinaryExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.BooleanBinaryExpression as node ->
       Some (node.BinaryExpressionType, node.FirstExpression, node.SecondExpression)
     | _ -> None
 
-  let (|BooleanIsNullExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|BooleanIsNullExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.BooleanIsNullExpression as node ->
       Some (node.IsNot, node.Expression)
@@ -3593,7 +3593,7 @@ module ActivePatterns =
       Some (node.Expression)
     | _ -> None
 
-  let (|GraphMatchExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|GraphMatchExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.GraphMatchExpression as node ->
       Some (node.LeftNode, node.Edge, node.RightNode, node.ArrowOnRight)
@@ -3665,7 +3665,7 @@ module ActivePatterns =
       Some (node.DataType, node.Seed, node.Increment)
     | _ -> None
 
-  let (|JoinParenthesisTableReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|JoinParenthesisTableRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.JoinParenthesisTableReference as node ->
       Some (node.Join)
@@ -3683,19 +3683,19 @@ module ActivePatterns =
       Some (node.SearchCondition, node.QualifiedJoinType, node.JoinHint)
     | _ -> None
 
-  let (|OdbcQualifiedJoinTableReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|OdbcQualifiedJoinTableRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.OdbcQualifiedJoinTableReference as node ->
       Some (node.TableReference)
     | _ -> None
 
-  let (|QueryExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|QueryExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.QueryExpression as node ->
       Some (node.OrderByClause, node.OffsetClause, node.ForClause)
     | _ -> None
 
-  let (|QueryParenthesisExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|QueryParenthesisExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.QueryParenthesisExpression as node ->
       Some (node.QueryExpression)
@@ -3713,13 +3713,13 @@ module ActivePatterns =
       Some (node.TableReferences |> Seq.toList)
     | _ -> None
 
-  let (|SelectScalarExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|SelectScalarExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.SelectScalarExpression as node ->
       Some (node.Expression, node.ColumnName)
     | _ -> None
 
-  let (|SelectStarExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|SelectStarExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.SelectStarExpression as node ->
       Some (node.Qualifier)
@@ -3731,25 +3731,25 @@ module ActivePatterns =
       Some (node.Variable, node.Expression, node.AssignmentKind)
     | _ -> None
 
-  let (|DataModificationTableReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|DataModificationTableRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.DataModificationTableReference as node ->
       Some (node.DataModificationSpecification)
     | _ -> None
 
-  let (|ChangeTableChangesTableReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ChangeTableChangesTableRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ChangeTableChangesTableReference as node ->
       Some (node.Target, node.SinceVersion)
     | _ -> None
 
-  let (|ChangeTableVersionTableReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ChangeTableVersionTableRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ChangeTableVersionTableReference as node ->
       Some (node.Target, node.PrimaryKeyColumns |> Seq.toList, node.PrimaryKeyValues |> Seq.toList)
     | _ -> None
 
-  let (|BooleanTernaryExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|BooleanTernaryExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.BooleanTernaryExpression as node ->
       Some (node.TernaryExpressionType, node.FirstExpression, node.SecondExpression, node.ThirdExpression)
@@ -3767,25 +3767,25 @@ module ActivePatterns =
       Some (node.OffsetExpression, node.FetchExpression)
     | _ -> None
 
-  let (|UnaryExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|UnaryExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.UnaryExpression as node ->
       Some (node.UnaryExpressionType, node.Expression)
     | _ -> None
 
-  let (|BinaryQueryExpression|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|BinaryQueryExpr|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.BinaryQueryExpression as node ->
       Some (node.BinaryQueryExpressionType, node.All, node.FirstQueryExpression, node.SecondQueryExpression)
     | _ -> None
 
-  let (|VariableTableReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|VariableTableRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.VariableTableReference as node ->
       Some (node.Variable)
     | _ -> None
 
-  let (|VariableMethodCallTableReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|VariableMethodCallTableRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.VariableMethodCallTableReference as node ->
       Some (node.Variable, node.MethodName, node.Parameters |> Seq.toList)
@@ -3917,25 +3917,25 @@ module ActivePatterns =
       Some (node.Password, node.Hashed, node.MustChange, node.Options |> Seq.toList)
     | _ -> None
 
-  let (|PrincipalOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|PrincipalOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.PrincipalOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|OnOffPrincipalOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|OnOffPrincipalOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.OnOffPrincipalOption as node ->
       Some (node.OptionState)
     | _ -> None
 
-  let (|LiteralPrincipalOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|LiteralPrincipalOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.LiteralPrincipalOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|IdentifierPrincipalOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|IdentifierPrincipalOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.IdentifierPrincipalOption as node ->
       Some (node.Identifier)
@@ -3959,7 +3959,7 @@ module ActivePatterns =
       Some (node.Key, node.Credential)
     | _ -> None
 
-  let (|PasswordAlterPrincipalOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|PasswordAlterPrincipalOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.PasswordAlterPrincipalOption as node ->
       Some (node.Password, node.OldPassword, node.MustChange, node.Unlock, node.Hashed)
@@ -4079,19 +4079,19 @@ module ActivePatterns =
       Some (node.IsConversation, node.Handle, node.InitiatorServiceName, node.TargetServiceName, node.InstanceSpec, node.ContractName, node.Options |> Seq.toList)
     | _ -> None
 
-  let (|DialogOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|DialogOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.DialogOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|ScalarExpressionDialogOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|ScalarExpressionDialogOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.ScalarExpressionDialogOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|OnOffDialogOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|OnOffDialogOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.OnOffDialogOption as node ->
       Some (node.OptionState)
@@ -4241,7 +4241,7 @@ module ActivePatterns =
       Some (node.ActionKind)
     | _ -> None
 
-  let (|AuditActionGroupReference|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|AuditActionGroupRef|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.AuditActionGroupReference as node ->
       Some (node.Group)
@@ -4265,61 +4265,61 @@ module ActivePatterns =
       Some (node.TargetKind, node.TargetOptions |> Seq.toList)
     | _ -> None
 
-  let (|AuditOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|AuditOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.AuditOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|QueueDelayAuditOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|QueueDelayAuditOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.QueueDelayAuditOption as node ->
       Some (node.Delay)
     | _ -> None
 
-  let (|AuditGuidAuditOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|AuditGuidAuditOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.AuditGuidAuditOption as node ->
       Some (node.Guid)
     | _ -> None
 
-  let (|OnFailureAuditOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|OnFailureAuditOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.OnFailureAuditOption as node ->
       Some (node.OnFailureAction)
     | _ -> None
 
-  let (|StateAuditOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|StateAuditOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.StateAuditOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|AuditTargetOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|AuditTargetOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.AuditTargetOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|MaxSizeAuditTargetOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|MaxSizeAuditTargetOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.MaxSizeAuditTargetOption as node ->
       Some (node.IsUnlimited, node.Size, node.Unit)
     | _ -> None
 
-  let (|MaxRolloverFilesAuditTargetOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|MaxRolloverFilesAuditTargetOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.MaxRolloverFilesAuditTargetOption as node ->
       Some (node.Value, node.IsUnlimited)
     | _ -> None
 
-  let (|LiteralAuditTargetOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|LiteralAuditTargetOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.LiteralAuditTargetOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|OnOffAuditTargetOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|OnOffAuditTargetOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.OnOffAuditTargetOption as node ->
       Some (node.Value)
@@ -4481,37 +4481,37 @@ module ActivePatterns =
       Some (node.ObjectName, node.TargetDeclarationParameters |> Seq.toList)
     | _ -> None
 
-  let (|SessionOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|SessionOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.SessionOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|EventRetentionSessionOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|EventRetentionSessionOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.EventRetentionSessionOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|MemoryPartitionSessionOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|MemoryPartitionSessionOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.MemoryPartitionSessionOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|LiteralSessionOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|LiteralSessionOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.LiteralSessionOption as node ->
       Some (node.Value, node.Unit)
     | _ -> None
 
-  let (|MaxDispatchLatencySessionOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|MaxDispatchLatencySessionOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.MaxDispatchLatencySessionOption as node ->
       Some (node.IsInfinite, node.Value)
     | _ -> None
 
-  let (|OnOffSessionOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|OnOffSessionOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.OnOffSessionOption as node ->
       Some (node.OptionState)
@@ -4541,13 +4541,13 @@ module ActivePatterns =
       Some (node.Name, node.Object, node.SpatialColumnName, node.SpatialIndexingScheme, node.SpatialIndexOptions |> Seq.toList, node.OnFileGroup)
     | _ -> None
 
-  let (|SpatialIndexRegularOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|SpatialIndexRegularOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.SpatialIndexRegularOption as node ->
       Some (node.Option)
     | _ -> None
 
-  let (|BoundingBoxSpatialIndexOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|BoundingBoxSpatialIndexOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.BoundingBoxSpatialIndexOption as node ->
       Some (node.BoundingBoxParameters |> Seq.toList)
@@ -4559,7 +4559,7 @@ module ActivePatterns =
       Some (node.Parameter, node.Value)
     | _ -> None
 
-  let (|GridsSpatialIndexOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|GridsSpatialIndexOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.GridsSpatialIndexOption as node ->
       Some (node.GridParameters |> Seq.toList)
@@ -4571,7 +4571,7 @@ module ActivePatterns =
       Some (node.Parameter, node.Value)
     | _ -> None
 
-  let (|CellsPerObjectSpatialIndexOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|CellsPerObjectSpatialIndexOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.CellsPerObjectSpatialIndexOption as node ->
       Some (node.Value)
@@ -4589,19 +4589,19 @@ module ActivePatterns =
       Some (node.Options |> Seq.toList)
     | _ -> None
 
-  let (|AlterServerConfigurationBufferPoolExtensionOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|AlterServerConfigurationBufferPoolExtensionOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.AlterServerConfigurationBufferPoolExtensionOption as node ->
       Some (node.OptionKind, node.OptionValue)
     | _ -> None
 
-  let (|AlterServerConfigurationBufferPoolExtensionContainerOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|AlterServerConfigurationBufferPoolExtensionContainerOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.AlterServerConfigurationBufferPoolExtensionContainerOption as node ->
       Some (node.Suboptions |> Seq.toList)
     | _ -> None
 
-  let (|AlterServerConfigurationBufferPoolExtensionSizeOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|AlterServerConfigurationBufferPoolExtensionSizeOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.AlterServerConfigurationBufferPoolExtensionSizeOption as node ->
       Some (node.SizeUnit)
@@ -4613,13 +4613,13 @@ module ActivePatterns =
       Some (node.Options |> Seq.toList)
     | _ -> None
 
-  let (|AlterServerConfigurationDiagnosticsLogOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|AlterServerConfigurationDiagnosticsLogOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.AlterServerConfigurationDiagnosticsLogOption as node ->
       Some (node.OptionKind, node.OptionValue)
     | _ -> None
 
-  let (|AlterServerConfigurationDiagnosticsLogMaxSizeOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|AlterServerConfigurationDiagnosticsLogMaxSizeOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.AlterServerConfigurationDiagnosticsLogMaxSizeOption as node ->
       Some (node.SizeUnit)
@@ -4631,7 +4631,7 @@ module ActivePatterns =
       Some (node.Options |> Seq.toList)
     | _ -> None
 
-  let (|AlterServerConfigurationFailoverClusterPropertyOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|AlterServerConfigurationFailoverClusterPropertyOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.AlterServerConfigurationFailoverClusterPropertyOption as node ->
       Some (node.OptionKind, node.OptionValue)
@@ -4643,7 +4643,7 @@ module ActivePatterns =
       Some (node.Options |> Seq.toList)
     | _ -> None
 
-  let (|AlterServerConfigurationHadrClusterOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|AlterServerConfigurationHadrClusterOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.AlterServerConfigurationHadrClusterOption as node ->
       Some (node.OptionKind, node.OptionValue, node.IsLocal)
@@ -4655,7 +4655,7 @@ module ActivePatterns =
       Some (node.Options |> Seq.toList)
     | _ -> None
 
-  let (|AlterServerConfigurationSoftNumaOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|AlterServerConfigurationSoftNumaOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.AlterServerConfigurationSoftNumaOption as node ->
       Some (node.OptionKind, node.OptionValue)
@@ -4679,49 +4679,49 @@ module ActivePatterns =
       Some (node.ServerName, node.Options |> Seq.toList)
     | _ -> None
 
-  let (|AvailabilityReplicaOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|AvailabilityReplicaOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.AvailabilityReplicaOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|LiteralReplicaOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|LiteralReplicaOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.LiteralReplicaOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|AvailabilityModeReplicaOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|AvailabilityModeReplicaOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.AvailabilityModeReplicaOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|FailoverModeReplicaOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|FailoverModeReplicaOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.FailoverModeReplicaOption as node ->
       Some (node.Value)
     | _ -> None
 
-  let (|PrimaryRoleReplicaOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|PrimaryRoleReplicaOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.PrimaryRoleReplicaOption as node ->
       Some (node.AllowConnections)
     | _ -> None
 
-  let (|SecondaryRoleReplicaOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|SecondaryRoleReplicaOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.SecondaryRoleReplicaOption as node ->
       Some (node.AllowConnections)
     | _ -> None
 
-  let (|AvailabilityGroupOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|AvailabilityGroupOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.AvailabilityGroupOption as node ->
       Some (node.OptionKind)
     | _ -> None
 
-  let (|LiteralAvailabilityGroupOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|LiteralAvailabilityGroupOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.LiteralAvailabilityGroupOption as node ->
       Some (node.Value)
@@ -4739,7 +4739,7 @@ module ActivePatterns =
       Some (node.Options |> Seq.toList)
     | _ -> None
 
-  let (|AlterAvailabilityGroupFailoverOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|AlterAvailabilityGroupFailoverOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.AlterAvailabilityGroupFailoverOption as node ->
       Some (node.OptionKind, node.Value)
@@ -4769,7 +4769,7 @@ module ActivePatterns =
       Some (node.DiskStatementType, node.Options |> Seq.toList)
     | _ -> None
 
-  let (|DiskStatementOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|DiskStatementOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.DiskStatementOption as node ->
       Some (node.OptionKind, node.Value)
@@ -4811,7 +4811,7 @@ module ActivePatterns =
       Some (node.TemporalClauseType, node.StartTime, node.EndTime)
     | _ -> None
 
-  let (|CompressionDelayIndexOption|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
+  let (|CompressionDelayIndexOpt|_|) (node:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlFragment) =
     match node with
     | :? Microsoft.SqlServer.TransactSql.ScriptDom.CompressionDelayIndexOption as node ->
       Some (node.Expression, node.TimeUnit)

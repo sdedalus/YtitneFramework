@@ -1,9 +1,10 @@
 ﻿namespace YtitneFramework
 open Microsoft.SqlServer.TransactSql.ScriptDom;
+open System;
 open System.IO;
 open System.Linq;
 open System.Collections.Generic;
-open Microsoft.SqlServer.TransactSql.ScriptDom.Strict.ActivePatterns;
+open YtitneFramework.Strict.ActivePatterns;
 
 module p =
 
@@ -26,8 +27,14 @@ module p =
             WHERE FirstName = @FirstName AND LastName = @LastName  
             AND EndDate IS NULL;  
         GO"
-        (fst response)
-        
+        match (fst response) with
+        | TSqlScript (b) -> b |> 
+            Seq.choose (function
+                | TSqlBatch (x) -> Some x
+                | _ -> None) |> Seq.iter (printf "%A")
+        | _ -> ()
+        0 
+         
         
 
 
